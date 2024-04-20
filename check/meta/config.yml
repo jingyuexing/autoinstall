@@ -1,0 +1,79 @@
+preset:
+  - type: maven
+    language: java
+    dependcies:
+      - pom.xml
+    command: mvn dependency:resolve
+  - type: gradle
+    language: java
+    dependcies:
+      - build.gradle
+    command: ./gradlew build
+  - type: Cargo
+    language: rust
+    dependcies:
+      - Cargo.toml
+    command: 
+  - type: pnpm
+    language: javascript
+    dependcies:
+      - pnpm-lock.yaml
+    command: 
+  - type: yarn
+    language: javascript
+    dependcies:
+      - yarn.lock
+    command: 
+  - type: deno
+    language: javascript
+    dependcies:
+      - deno.json
+      - deno.lock
+    command: 
+  - type: npm
+    language: javascript
+    dependcies:
+      - package-lock.json
+    command: 
+  - type: bundle
+    language: ruby
+    dependcies:
+      - Gemfile
+    command: bundle install
+  - type: dart
+    language: dart
+    dependcies:
+      - pubspec.yaml
+    command: dart pub get
+  - type: flutter
+    language: dart
+    dependcies:
+      - pubspec.lock
+      - pubspec.yaml
+    command: flutter pub get
+  - type: pip
+    language: python
+    dependcies:
+      - requirements.txt
+    command: pip install -r requirements.txt
+  - type: poetry
+    language: python
+    dependcies:
+      - poetry.lock
+    command: poetry install
+  - type: poetry
+    language: C#
+    dependcies:
+      - packages.config
+    command: nuget install
+  - type: composer
+    language: PHP
+    dependcies:
+      - composer.json
+    command: composer install
+  - type: Goland
+    language: Go
+    dependcies:
+      - go.mod
+      - go.sum
+    command: go mod tidy

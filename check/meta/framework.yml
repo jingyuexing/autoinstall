@@ -1,0 +1,115 @@
+preset:
+  - type: Vite
+    language: javascript
+    dependcies:
+      - vite.config.ts
+      - vite.config.js
+  - type: Webpack
+    language: Javascript
+    dependcies:
+      - webpack.config.js
+  - type: Just
+    language: unknow
+    dependcies:
+      - justfile
+  - type: Unocss
+    language: Javascript / Typescript
+    dependcies:
+      - uno.config.ts
+      - uno.config.js
+  - type: Nuxt
+    language: Javascript / Typescript
+    dependcies:
+      - nuxt.config.ts
+      - nuxt.config.js
+  - type: Next.js
+    language: Javascript / Typescript
+    dependcies:
+      - next.config.ts
+      - next.config.js
+  - type: Vercel
+    language: Javascript / Typescript
+    dependcies:
+      - vercel.json
+  - type: Turbo
+    language: Javascript / Typescript
+    dependcies:
+      - turbo.json
+  - type: Docker
+    language: unknow
+    dependcies:
+      - Dockerfile
+      - docker-compose.yml
+      - docker-compose.yaml
+  - type: Eslint
+    language: Javascript / Typescript
+    dependcies:
+      - .eslintignore
+  - type: Typescript
+    language: Typescript
+    dependcies:
+      - tsconfig.json
+      - tsconfig.node.json
+      - tsconfig.base.json
+  - type: lerna
+    language: Javascript / Typescript
+    dependcies:
+      - lerna.json
+  - type: Monorepo
+    language: Javascript / Typescript
+    dependcies:
+      - pnpm-workspace.yaml
+  - type: Azure
+    language: unknow
+    dependcies:
+      - azure-pipelines.yml
+  - type: TailwindCSS
+    language: Javascript / Typescript
+    dependcies:
+      - tailwind.config.js
+  - type: CMake
+    language: CMake
+    dependcies:
+      - CMakeLists.txt
+  - type: Makefile
+    language: Makefile
+    dependcies:
+      - Makefile
+  - type: PDM(Python package and dependency manager)
+    language: Python
+    dependcies:
+      - pdm.lock
+  - type: Python Project
+    language: Python
+    dependcies:
+      - pyproject.toml
+  - type: Editor Config
+    language: unknow
+    dependcies:
+      - .editorconfig
+  - type: Gulp
+    language: Javascript / Typescript
+    dependcies:
+      - gulpfile.js
+  - type: Gulp
+    language: Javascript / Typescript
+    dependcies:
+      - gulpfile.js
+  - type: Commit Lint
+    language: unknow
+    dependcies:
+      - .commitlintrc.json
+  - type: Nestjs
+    language: Typescript
+    dependcies:
+      - nest-cli.json
+  - type: Uniapp
+    language: Javascript / Typescript
+    dependcies:
+      - manifest.json
+      - pages.json
+  - type: Clang format
+    language: C / CPP
+    dependcies:
+      - .clang-format
+      - .clang-tidy
