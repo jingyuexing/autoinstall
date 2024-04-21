@@ -13,6 +13,6 @@ func main() {
 	}
 	check.Analyze(path)
 	for _, tech := range check.Analyze(path) {
-		fmt.Printf("Program Language: %s ,Tech: %s\n", tech.Language, tech.Type)
+		fmt.Printf("Program Language: %s ,Tech: %s\n", tech.Language, tech.Name)
 	}
 }

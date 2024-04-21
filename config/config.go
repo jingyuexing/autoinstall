@@ -18,6 +18,8 @@ var meta embed.FS
 
 type Items struct {
 	Type          string   `json:"type" yaml:"type"`
+	OfficeSite    string   `json:"url" yaml:"url"`
+	Name          string   `json:"name" yaml:"name"`
 	Language      string   `json:"language" yaml:"language"`
 	DepndciesFile []string `json:"dependcies" yaml:"dependcies"`
 	Commander     string   `json:"command" yaml:"command"`
