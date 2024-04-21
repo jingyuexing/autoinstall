@@ -1,77 +1,97 @@
 preset:
-  - type: maven
+  - type: Package Manager
+    name: maven
     language: java
     dependcies:
       - pom.xml
     command: mvn dependency:resolve
+  
   - type: gradle
     language: java
     dependcies:
       - build.gradle
     command: ./gradlew build
-  - type: Cargo
+  
+  - type: Package Manager
+    name: Cargo
     language: rust
     dependcies:
       - Cargo.toml
     command: 
-  - type: pnpm
+  
+  - type: Package Manager
+    name: pnpm
     language: javascript
     dependcies:
       - pnpm-lock.yaml
     command: 
-  - type: yarn
+  - type: Package Manager
+    name: Yarn
     language: javascript
     dependcies:
       - yarn.lock
-    command: 
-  - type: deno
+    command: yarn add
+  - type: Package Manager
+    name: Deno
     language: javascript
     dependcies:
       - deno.json
       - deno.lock
     command: 
-  - type: npm
+  - type: Package Manager
+    name: NPM
     language: javascript
     dependcies:
       - package-lock.json
     command: 
-  - type: bundle
+  - type: Package Manager
+    name: bundle
     language: ruby
     dependcies:
       - Gemfile
     command: bundle install
+  
   - type: dart
+    name: Dart
     language: dart
     dependcies:
       - pubspec.yaml
     command: dart pub get
+  
   - type: flutter
+    name: flutter
     language: dart
     dependcies:
       - pubspec.lock
       - pubspec.yaml
     command: flutter pub get
-  - type: pip
+  
+  - type: Package Manager
+    name: Pip
     language: python
     dependcies:
       - requirements.txt
     command: pip install -r requirements.txt
-  - type: poetry
+  - type: Package Manager
+    name: Poetry
     language: python
     dependcies:
       - poetry.lock
     command: poetry install
-  - type: poetry
+  - type: Package Manager
+    name: Nuget
     language: C#
     dependcies:
       - packages.config
     command: nuget install
-  - type: composer
+  - name: composer
+    type: Package Manager
     language: PHP
     dependcies:
       - composer.json
     command: composer install
   - type: Goland
+    name: Goland
     language: Go
     dependcies:
       - go.mod

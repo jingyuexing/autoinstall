@@ -1,32 +1,51 @@
 preset:
-  - type: Vite
+  - type: Build System
+    name: Vite
     language: javascript
     dependcies:
       - vite.config.ts
       - vite.config.js
-  - type: Webpack
+  - type: Testing framework
+    name: Vitest
+    language: Javascript / Typescript
+    dependcies:
+      - vitest.config.ts
+      - vitest.config.js
+  
+  - type: Build System
+    name: Webpack
     language: Javascript
     dependcies:
       - webpack.config.js
-  - type: Just
-    language: unknow
+  
+  - type: Command Line
+    name: Just
+    language: UNKNOW
     dependcies:
       - justfile
-  - type: Unocss
+  
+  - type: Atom CSS framework
+    name: Unocss
     language: Javascript / Typescript
     dependcies:
       - uno.config.ts
       - uno.config.js
-  - type: Nuxt
+  
+  - name: Nuxt
+    type: Server Side Rendering framework
     language: Javascript / Typescript
     dependcies:
       - nuxt.config.ts
       - nuxt.config.js
-  - type: Next.js
+      - .nuxtrc
+  
+  - type: Server Side Rendering framework
+    name: Next.js
     language: Javascript / Typescript
     dependcies:
       - next.config.ts
       - next.config.js
+  
   - type: Vercel
     language: Javascript / Typescript
     dependcies:
@@ -36,7 +55,7 @@ preset:
     dependcies:
       - turbo.json
   - type: Docker
-    language: unknow
+    language: UNKNOW
     dependcies:
       - Dockerfile
       - docker-compose.yml
@@ -45,6 +64,7 @@ preset:
     language: Javascript / Typescript
     dependcies:
       - .eslintignore
+      - .eslintrc
   - type: Typescript
     language: Typescript
     dependcies:
@@ -60,50 +80,57 @@ preset:
     dependcies:
       - pnpm-workspace.yaml
   - type: Azure
-    language: unknow
+    language: UNKNOW
     dependcies:
       - azure-pipelines.yml
-  - type: TailwindCSS
+  - name: TailwindCSS
+    type: Atom CSS framework
     language: Javascript / Typescript
     dependcies:
       - tailwind.config.js
-  - type: CMake
+      - tailwind.config.ts
+  - type: Build System
+    name: CMake
     language: CMake
     dependcies:
       - CMakeLists.txt
-  - type: Makefile
+  - type: Build System
+    name: Makefile
     language: Makefile
     dependcies:
       - Makefile
   - type: PDM(Python package and dependency manager)
+    name: PDM
     language: Python
     dependcies:
       - pdm.lock
-  - type: Python Project
+  - type: Build System
+    name: Python Project
     language: Python
     dependcies:
       - pyproject.toml
-  - type: Editor Config
-    language: unknow
+  - type: Editor settings
+    name: Editor Config
+    language: UNKNOW
     dependcies:
       - .editorconfig
-  - type: Gulp
+  - type: Build System
+    name: Gulp
     language: Javascript / Typescript
     dependcies:
       - gulpfile.js
-  - type: Gulp
-    language: Javascript / Typescript
-    dependcies:
-      - gulpfile.js
-  - type: Commit Lint
-    language: unknow
+  - type: Lint
+    name: Commit Lint
+    language: UNKNOW
     dependcies:
       - .commitlintrc.json
-  - type: Nestjs
+  - type: framework
+    name: Nestjs
     language: Typescript
     dependcies:
       - nest-cli.json
-  - type: Uniapp
+  - type: framework
+    name: Uniapp
     language: Javascript / Typescript
     dependcies:
       - manifest.json
@@ -113,3 +140,28 @@ preset:
     dependcies:
       - .clang-format
       - .clang-tidy
+  - type: Lint
+    name: Pritter
+    language: Javascript / Typescript
+    dependcies:
+      - .prettierrc
+  - type: Bun
+    language: Javascript / Typescript
+    dependcies:
+      - bun.lockb
+  - type: Dot ENV
+    language: UNKNOW
+    dependcies:
+      - .env
+      - .env.prod.local
+      - .env.development.local
+  - type: serverless
+    name: netlify
+    language: TOML
+    dependcies:
+      - netlify.toml
+  - type: Testing
+    name: cypress
+    language: UNKNOW
+    dependcies:
+      - cypress.config.ts
